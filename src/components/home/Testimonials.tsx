@@ -3,9 +3,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-section-pattern bg-cover bg-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-6">TESTIMONIOS</h2>
+        <h2 className="text-4xl font-bold text-center mb-6 text-primary-title">TESTIMONIOS</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
         </p>
