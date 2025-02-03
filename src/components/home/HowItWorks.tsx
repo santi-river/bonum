@@ -5,9 +5,9 @@ export const HowItWorks = () => {
         <h2 className="text-4xl font-bold text-center mb-12 text-primary-title">¿Cómo funciona?</h2>
         <div className="flex justify-center">
           <img 
-            src="/placeholder.svg" 
-            alt="Cómo funciona" 
-            className="max-w-2xl w-full rounded-lg shadow-lg"
+            src="/lovable-uploads/4be0d193-b6de-432b-ae6f-435232629726.png" 
+            alt="Cómo funciona el sistema" 
+            className="max-w-4xl w-full"
           />
         </div>
       </div>

@@ -25,7 +25,12 @@ export const Header = () => {
             <a href="#" className="hover:text-primary">FUNCIONALIDADES</a>
             <a href="#" className="hover:text-primary">TESTIMONIOS</a>
           </div>
-          <Button variant="outline">Reserva una llamada</Button>
+          <Button 
+            className="bg-[#6AA43C] hover:bg-[#6AA43C]/90 text-white"
+            onClick={() => window.open('https://calendly.com/jose-xcapit/30min', '_blank')}
+          >
+            Reserva una llamada
+          </Button>
         </nav>
       </div>
     </header>
