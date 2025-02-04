@@ -1,13 +1,35 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useForm } from "react-hook-form";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
 
 export const Hero = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const { error } = await supabase
+        .from('Datos')
+        .insert([{ email: data.email, Empresa: data.company }]);
+      
+      if (error) throw error;
+      
+      toast({
+        title: "¡Gracias por tu interés!",
+        description: "Te contactaremos pronto.",
+      });
+      
+      reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar el formulario.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
