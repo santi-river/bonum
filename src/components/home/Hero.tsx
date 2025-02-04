@@ -5,15 +5,31 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useForm } from "react-hook-form";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const formSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+  company: z.string().optional()
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 export const Hero = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
+    resolver: zodResolver(formSchema)
+  });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: FormData) => {
     try {
       const { error } = await supabase
         .from('Datos')
-        .insert([{ email: data.email, Empresa: data.company }]);
+        .insert([
+          { 
+            email: data.email, 
+            Empresa: data.company || null 
+          }
+        ]);
       
       if (error) throw error;
       
@@ -24,6 +40,7 @@ export const Hero = () => {
       
       reset();
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "Hubo un problema al enviar el formulario.",
@@ -53,8 +70,12 @@ export const Hero = () => {
                     <Input
                       type="email"
                       placeholder="ejemplo@gmail.com"
-                      {...register("email", { required: true })}
+                      {...register("email")}
+                      className={errors.email ? "border-red-500" : ""}
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm">{errors.email.message}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Empresa</label>
