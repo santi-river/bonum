@@ -7,12 +7,19 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export const Header = () => {
   const isMobile = useIsMobile();
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const NavigationLinks = () => (
     <>
       <a href="#" className="hover:text-primary">Home</a>
-      <a href="#" className="hover:text-primary">NOSOTROS</a>
-      <a href="#" className="hover:text-primary">FUNCIONALIDADES</a>
-      <a href="#" className="hover:text-primary">TESTIMONIOS</a>
+      <a href="https://www.xcapit.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">NOSOTROS</a>
+      <button onClick={() => scrollToSection('features')} className="hover:text-primary">FUNCIONALIDADES</button>
+      <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary">TESTIMONIOS</button>
     </>
   );
 
@@ -20,13 +27,13 @@ export const Header = () => {
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         {!isMobile && (
-          <div className="flex justify-between items-center py-2 text-sm text-gray-600">
+          <div className="flex justify-between items-center py-2 text-sm text-gray-600 border-b">
             <div className="flex gap-4">
-              <a href="mailto:jose@xcapit.com" className="flex items-center gap-2">
+              <a href="mailto:jose@xcapit.com" className="flex items-center gap-2 hover:text-primary-title transition-colors">
                 <Mail size={16} />
                 jose@xcapit.com
               </a>
-              <a href="tel:+5493516897597" className="flex items-center gap-2">
+              <a href="tel:+5493516897597" className="flex items-center gap-2 hover:text-primary-title transition-colors">
                 <Phone size={16} />
                 +5493516897597
               </a>
