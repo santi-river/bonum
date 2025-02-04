@@ -17,7 +17,7 @@ export const Features = () => {
           </div>
 
           <img 
-            src="/lovable-uploads/2b3143ff-c63d-4eb1-9a7f-724d50ee9e30.png"
+            src="/lovable-uploads/a9afa785-4baa-4cec-9f97-182570b3c271.png"
             alt="App Preview"
             className="max-w-[300px] mx-auto mb-20"
           />
