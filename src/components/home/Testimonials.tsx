@@ -11,30 +11,15 @@ import {
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 bg-section-pattern bg-cover bg-center">
+    <section id="testimonials" className="py-12 -mt-8 bg-section-pattern bg-cover bg-center">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-6 text-primary-title">TESTIMONIOS</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae.
+          Descubre lo que nuestros clientes dicen sobre nuestra plataforma de beneficios empresariales
         </p>
         
         <Carousel className="max-w-4xl mx-auto">
           <CarouselContent>
-            <CarouselItem>
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <Avatar className="w-20 h-20 mx-auto mb-4">
-                    <AvatarImage src="https://cdn.builder.io/api/v1/image/assets/TEMP/edf02fbb4a92fa1c1a523aea41c2bf3d3d1a773456c55e376ef8e831ca178c32?placeholderIfAbsent=true" />
-                    <AvatarFallback>AL</AvatarFallback>
-                  </Avatar>
-                  <h3 className="font-semibold mb-2">Ann Lubin</h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-
             <CarouselItem>
               <Card>
                 <CardContent className="pt-6 text-center">
@@ -45,7 +30,7 @@ export const Testimonials = () => {
                   <h3 className="font-semibold mb-2">isowean</h3>
                   <p className="text-sm text-gray-500 mb-4">Co-Founder</p>
                   <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    "La plataforma ha transformado completamente la manera en que gestionamos los beneficios para nuestros empleados. La facilidad de uso y el soporte son excepcionales."
                   </p>
                 </CardContent>
               </Card>
@@ -56,11 +41,12 @@ export const Testimonials = () => {
                 <CardContent className="pt-6 text-center">
                   <Avatar className="w-20 h-20 mx-auto mb-4">
                     <AvatarImage src="https://cdn.builder.io/api/v1/image/assets/TEMP/edf02fbb4a92fa1c1a523aea41c2bf3d3d1a773456c55e376ef8e831ca178c32?placeholderIfAbsent=true" />
-                    <AvatarFallback>AL</AvatarFallback>
+                    <AvatarFallback>MR</AvatarFallback>
                   </Avatar>
-                  <h3 className="font-semibold mb-2">Ann Lubin</h3>
+                  <h3 className="font-semibold mb-2">María Rodriguez</h3>
+                  <p className="text-sm text-gray-500 mb-4">Gerente de RRHH</p>
                   <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    "Implementar esta solución ha mejorado significativamente la satisfacción de nuestros empleados. El proceso es simple y los resultados son notables."
                   </p>
                 </CardContent>
               </Card>
