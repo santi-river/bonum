@@ -11,16 +11,22 @@ export type Database = {
     Tables: {
       Datos: {
         Row: {
-          email: number
-          Empresa: string
+          created_at: string
+          email: string
+          Empresa: string | null
+          id: string
         }
         Insert: {
-          email?: number
-          Empresa?: string
+          created_at?: string
+          email: string
+          Empresa?: string | null
+          id?: string
         }
         Update: {
-          email?: number
-          Empresa?: string
+          created_at?: string
+          email?: string
+          Empresa?: string | null
+          id?: string
         }
         Relationships: []
       }

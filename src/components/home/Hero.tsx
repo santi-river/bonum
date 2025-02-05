@@ -24,12 +24,10 @@ export const Hero = () => {
     try {
       const { error } = await supabase
         .from('Datos')
-        .insert([
-          { 
-            email: data.email, 
-            Empresa: data.company || null 
-          }
-        ]);
+        .insert({
+          email: data.email,
+          Empresa: data.company || null
+        });
       
       if (error) throw error;
       
