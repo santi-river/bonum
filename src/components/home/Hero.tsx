@@ -52,11 +52,9 @@ export const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="bg-white p-8 border-4 border-primary-title rounded-lg">
-              <h1 className="text-4xl font-bold text-primary-title">
-                Sistema de beneficios para colaboradores enfocado en el bienestar empresarial y laboral
-              </h1>
-            </div>
+            <h1 className="text-4xl font-bold mb-6 text-primary-title">
+              Sistema de beneficios para colaboradores enfocado en el bienestar empresarial y laboral
+            </h1>
           </div>
           <div>
             <Card>
