@@ -23,7 +23,7 @@ export const Features = () => {
           />
 
           <div className="grid md:grid-cols-3 gap-8 w-full">
-            <div className="flex flex-col items-center -mt-[240px]">
+            <div className="flex flex-col items-center -mt-[440px]">
               <Store size={48} className="text-white mb-2" />
               <h3 className="text-xl font-semibold text-white">PLATAFORMA DE COMERCIOS</h3>
             </div>
@@ -33,7 +33,7 @@ export const Features = () => {
               <h3 className="text-xl font-semibold text-white">PLATAFORMA DE ADMINISTRACIÓN</h3>
             </div>
 
-            <div className="flex flex-col items-center -mt-[240px]">
+            <div className="flex flex-col items-center -mt-[340px]">
               <Smartphone size={48} className="text-white mb-2" />
               <h3 className="text-xl font-semibold text-white">BILLETERA VIRTUAL</h3>
             </div>
