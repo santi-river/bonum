@@ -33,7 +33,7 @@ export const Features = () => {
               <h3 className="text-xl font-semibold text-white">PLATAFORMA DE ADMINISTRACIÓN</h3>
             </div>
 
-            <div className="flex flex-col items-center -mt-[340px] -ml-[50px]">
+            <div className="flex flex-col items-center -mt-[340px] -ml-[100px]">
               <Smartphone size={48} className="text-white mb-2" />
               <h3 className="text-xl font-semibold text-white">BILLETERA VIRTUAL</h3>
             </div>
