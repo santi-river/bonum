@@ -25,7 +25,7 @@ export const Features = () => {
 
           {/* Central image */}
           <img 
-            src="/lovable-uploads/a9afa785-4baa-4cec-9f97-182570b3c271.png"
+            src="/lovable-uploads/7a32fdc3-7be4-48fc-b2d2-062426e52990.png"
             alt="App Preview"
             className="max-w-[300px] mx-auto mb-8"
           />
@@ -36,7 +36,7 @@ export const Features = () => {
               <Settings size={48} className="text-white mb-2" />
               <h3 className="text-xl font-semibold text-white">{t("ADMIN_PLATFORM")}</h3>
             </div>
-            <div className="flex flex-col items-center -ml-[100px]">
+            <div className="flex flex-col items-center">
               <Smartphone size={48} className="text-white mb-2" />
               <h3 className="text-xl font-semibold text-white">{t("VIRTUAL_WALLET")}</h3>
             </div>
