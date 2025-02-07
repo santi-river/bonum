@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useLanguage } from "@/hooks/use-language";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -16,6 +16,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export const Hero = () => {
+  const { t } = useLanguage();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(formSchema)
   });
@@ -53,18 +54,18 @@ export const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl font-bold mb-6 text-primary-title">
-              Sistema de beneficios para colaboradores enfocado en el bienestar empresarial y laboral
+              {t("HERO_TITLE")}
             </h1>
           </div>
           <div>
             <Card>
               <CardHeader>
-                <h3 className="text-2xl font-semibold text-primary-title">Solicitar información</h3>
+                <h3 className="text-2xl font-semibold text-primary-title">{t("REQUEST_INFO")}</h3>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Email *</label>
+                    <label className="text-sm font-medium">{t("EMAIL")} *</label>
                     <Input
                       type="email"
                       placeholder="ejemplo@gmail.com"
@@ -76,7 +77,7 @@ export const Hero = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Empresa</label>
+                    <label className="text-sm font-medium">{t("COMPANY")}</label>
                     <Input
                       type="text"
                       placeholder="Ejemplo"
@@ -84,7 +85,7 @@ export const Hero = () => {
                     />
                   </div>
                   <Button type="submit" className="w-full bg-primary-title hover:bg-primary-title/90">
-                    Enviar
+                    {t("SEND")}
                   </Button>
                 </form>
               </CardContent>

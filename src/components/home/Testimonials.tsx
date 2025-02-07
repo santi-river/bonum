@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { 
@@ -8,14 +7,17 @@ import {
   CarouselPrevious,
   CarouselNext
 } from "@/components/ui/carousel";
+import { useLanguage } from "@/hooks/use-language";
 
 export const Testimonials = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="testimonials" className="py-12 -mt-8 bg-section-pattern bg-cover bg-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-6 text-primary-title">TESTIMONIOS</h2>
+        <h2 className="text-4xl font-bold text-center mb-6 text-primary-title">{t("TESTIMONIALS")}</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Descubre lo que nuestros clientes dicen sobre nuestra plataforma de beneficios empresariales
+          {t("TESTIMONIALS_SUBTITLE")}
         </p>
         
         <Carousel className="max-w-4xl mx-auto">
@@ -30,7 +32,7 @@ export const Testimonials = () => {
                   <h3 className="font-semibold mb-2">isowean</h3>
                   <p className="text-sm text-gray-500 mb-4">Co-Founder</p>
                   <p className="text-gray-600">
-                    "La plataforma ha transformado completamente la manera en que gestionamos los beneficios para nuestros empleados. La facilidad de uso y el soporte son excepcionales."
+                    {t("TESTIMONIAL_1")}
                   </p>
                 </CardContent>
               </Card>
@@ -46,7 +48,7 @@ export const Testimonials = () => {
                   <h3 className="font-semibold mb-2">María Rodriguez</h3>
                   <p className="text-sm text-gray-500 mb-4">Gerente de RRHH</p>
                   <p className="text-gray-600">
-                    "Implementar esta solución ha mejorado significativamente la satisfacción de nuestros empleados. El proceso es simple y los resultados son notables."
+                    {t("TESTIMONIAL_2")}
                   </p>
                 </CardContent>
               </Card>

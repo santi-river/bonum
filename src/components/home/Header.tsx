@@ -1,17 +1,13 @@
-
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Menu, Languages } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
+import { useLanguage } from "@/hooks/use-language";
 
 export const Header = () => {
   const isMobile = useIsMobile();
-  const [language, setLanguage] = useState<'es' | 'en'>('es');
-
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'es' ? 'en' : 'es');
-  };
+  const { language, toggleLanguage, t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -24,13 +20,13 @@ export const Header = () => {
     <>
       <a href="#" className="hover:text-primary">Home</a>
       <a href="https://www.xcapit.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-        {language === 'es' ? 'NOSOTROS' : 'ABOUT US'}
+        {t("ABOUT_US")}
       </a>
       <button onClick={() => scrollToSection('features')} className="hover:text-primary">
-        {language === 'es' ? 'FUNCIONALIDADES' : 'FEATURES'}
+        {t("FEATURES")}
       </button>
       <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary">
-        {language === 'es' ? 'TESTIMONIOS' : 'TESTIMONIALS'}
+        {t("TESTIMONIALS")}
       </button>
     </>
   );
@@ -70,7 +66,7 @@ export const Header = () => {
                 className="bg-[#6AA43C] hover:bg-[#6AA43C]/90 text-white"
                 onClick={() => window.open('https://calendly.com/jose-xcapit/30min', '_blank')}
               >
-                {language === 'es' ? 'Reserva una llamada' : 'Book a call'}
+                {t("BOOK_CALL")}
               </Button>
               <Sheet>
                 <SheetTrigger asChild>
@@ -103,7 +99,7 @@ export const Header = () => {
                 className="bg-[#6AA43C] hover:bg-[#6AA43C]/90 text-white"
                 onClick={() => window.open('https://calendly.com/jose-xcapit/30min', '_blank')}
               >
-                {language === 'es' ? 'Reserva una llamada' : 'Book a call'}
+                {t("BOOK_CALL")}
               </Button>
             </>
           )}
