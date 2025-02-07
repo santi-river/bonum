@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -10,13 +11,13 @@ export const Benefits = () => {
           <div className="text-center">
             <h3 className="text-3xl font-semibold mb-6 text-primary-title">Talento</h3>
             <ul className="space-y-4">
-              <li className="text-[#6AA43C]">
+              <li className="text-[#6AA43C] font-semibold">
                 La empresa gestiona, el colaborador disfruta: acceso a compras en condiciones favorables gracias al poder de negociación de la empresa.
               </li>
-              <li className="text-[#6AA43C]">
+              <li className="text-[#6AA43C] font-semibold">
                 La empresa reconoce, el colaborador se supera: beneficios personalizados que impulsan compromiso, bienestar y pertenencia.
               </li>
-              <li className="text-[#6AA43C]">
+              <li className="text-[#6AA43C] font-semibold">
                 La empresa cuida, el colaborador crece: al fortalecer la relación individual, se reduce la deserción y el ausentismo, mientras aumenta la productividad y el NPS.
               </li>
             </ul>
@@ -27,10 +28,10 @@ export const Benefits = () => {
           <div className="text-center">
             <h3 className="text-3xl font-semibold mb-6">Fiscal</h3>
             <ul className="space-y-4">
-              <li className="text-[#6AA43C]">
+              <li className="text-[#6AA43C] font-semibold">
                 Maximiza ventajas fiscales mediante compensaciones exentas de cargas sociales.
               </li>
-              <li className="text-[#6AA43C]">
+              <li className="text-[#6AA43C] font-semibold">
                 Optimiza el capital al canalizar los pagos de comercios adheridos a cuentas corrientes.
               </li>
             </ul>
@@ -41,7 +42,7 @@ export const Benefits = () => {
           <div className="text-center">
             <h3 className="text-3xl font-semibold mb-6">Finanzas</h3>
             <ul className="space-y-4">
-              <li className="text-[#6AA43C]">
+              <li className="text-[#6AA43C] font-semibold">
                 Control total, gestión simplificada: trazabilidad y claridad en la distribución de beneficios, facilitando auditorías y optimizando la gestión administrativa.
               </li>
             </ul>
