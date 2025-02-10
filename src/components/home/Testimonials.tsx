@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { 
@@ -26,11 +27,11 @@ export const Testimonials = () => {
               <Card>
                 <CardContent className="pt-6 text-center">
                   <Avatar className="w-20 h-20 mx-auto mb-4">
-                    <AvatarImage src="https://cdn.builder.io/api/v1/image/assets/TEMP/659b7b3f4157db5597e9bc749d49a64e6bbcc36251634c0ebb72a51ab73c956e?placeholderIfAbsent=true" />
+                    <AvatarImage src="/lovable-uploads/e32eb6fd-5a7c-4545-803a-bae2b7de00ea.png" />
                     <AvatarFallback>IS</AvatarFallback>
                   </Avatar>
                   <h3 className="font-semibold mb-2">isowean</h3>
-                  <p className="text-sm text-gray-500 mb-4">Co-Founder</p>
+                  <p className="text-sm text-gray-500 mb-4">Responsable de RRHH</p>
                   <p className="text-gray-600">
                     {t("TESTIMONIAL_1")}
                   </p>

@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Menu, Languages } from "lucide-react";
+import { Mail, Menu, Languages } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
@@ -40,10 +41,6 @@ export const Header = () => {
               <a href="mailto:jose@xcapit.com" className="flex items-center gap-2 hover:text-primary-title transition-colors">
                 <Mail size={16} />
                 jose@xcapit.com
-              </a>
-              <a href="tel:+5493516897597" className="flex items-center gap-2 hover:text-primary-title transition-colors">
-                <Phone size={16} />
-                +5493516897597
               </a>
             </div>
             <Button
