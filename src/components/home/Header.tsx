@@ -38,9 +38,9 @@ export const Header = () => {
         {!isMobile && (
           <div className="flex justify-between items-center py-2 text-sm text-gray-600 border-b">
             <div className="flex gap-4">
-              <a href="mailto:jose@xcapit.com" className="flex items-center gap-2 hover:text-primary-title transition-colors">
+              <a href="mailto:bd@xcapit.com" className="flex items-center gap-2 hover:text-primary-title transition-colors">
                 <Mail size={16} />
-                jose@xcapit.com
+                bd@xcapit.com
               </a>
             </div>
             <Button
